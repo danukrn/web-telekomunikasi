@@ -1,37 +1,9 @@
 import Image from "next/image";
-
+import Link from 'next/link'
 
 export default function Home() {
   return (
-    <div className="min-h-screen flex flex-col">
-      
-      {/* Header */}
-      <header className="bg-blue-800 text-white flex items-center py-4 px-8">
-        <nav className="flex items-center w-full">
-          {/* Left Section: Logo and Title */}
-          <div className="flex items-center space-x-2">
-            <img 
-              src="/telkom.ico" // Adjust path if needed
-              alt="logo"
-              className="w-10 h-10"
-            />
-            <div>
-              <h1 className="text-lg font-bold text-yellow-400">Teknik Telekomunikasi</h1>
-              <p className="text-sm">Institut Teknologi Sumatera</p>
-            </div>
-          </div>
-
-          {/* Right Section: Navigation Links */}
-          <div className="ml-auto font-semibold flex space-x-4">
-            <a href="#profile" className="">Profil</a>
-            <a href="#academic" className="">Akademik</a>
-            <a href="#internship" className="">Kerja Praktek</a>
-            <a href="#student-services" className="">Layanan Mahasiswa</a>
-            <a href="#final-project" className="">Tugas Akhir</a>
-          </div>
-        </nav>
-      </header>
-
+    <div>
 
       {/* Hero Section */}
       <section className="relative">
@@ -72,14 +44,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="bg-blue-800 text-white">
-        <div className="bg-yellow-500 h-1"></div> {/* Yellow line */}
-        <div className="flex flex-col items-center py-4 px-8">
-          <p className="text-sm">&copy; 2024 Teknik Telekomunikasi, Institut Teknologi Sumatera</p>
-          <p className="text-sm">All rights reserved.</p>
-        </div>
-      </footer>
     </div>
   );
 }
