@@ -29,12 +29,14 @@ export default function RootLayout({ children }) {
             {/* Left Section: Logo and Title */}
             <div className="flex items-center space-x-2">
               <img
-                src="/telkom.ico" // Adjust path if needed
+                src="/images/telkom.ico" // Adjust path if needed
                 alt="logo"
-                className="w-10 h-10"
+                className="w-11 h-10"
               />
               <div>
-                <h1 className="text-lg font-bold text-yellow-400">Teknik Telekomunikasi</h1>
+                <Link href="/" className="">
+                  <h1 className="text-lg font-bold text-yellow-400">Teknik Telekomunikasi</h1>
+                </Link>
                 <p className="text-sm">Institut Teknologi Sumatera</p>
               </div>
             </div>
@@ -42,13 +44,14 @@ export default function RootLayout({ children }) {
             {/* Right Section: Navigation Links */}
             <div className="ml-auto font-semibold flex space-x-4">
               <Link href="/profile" className="">Profil</Link>
-              <Link href="#academic" className="">Akademik</Link>
+              <Link href="/academic" className="">Akademik</Link>
               <Link href="#internship" className="">Kerja Praktek</Link>
               <Link href="#student-services" className="">Layanan Mahasiswa</Link>
               <Link href="#final-project" className="">Tugas Akhir</Link>
             </div>
           </nav>
         </header>
+        <div className="bg-yellow-500 h-1"></div> {/* Yellow line */}
         {children}
         {/* Footer */}
         <footer className="bg-blue-800 text-white">
