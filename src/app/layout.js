@@ -12,16 +12,16 @@ const geistMono = localFont({
   variable: "--font-geist-mono",
   weight: "100 900",
 });
+const currentYear = new Date().getFullYear(); //Year At Footer
 
 export const metadata = {
   title: "Telekomunikasi",
-  description: "create by danukrn & ryuumaks",
+  description: "create by danukrn & Fadlirmn",
 };
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-
+    <html lang="en" className="h-full">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen flex flex-col`}>
         {/* Header */}
         <header className="bg-blue-800 text-white flex items-center py-4 px-8 ">
@@ -52,12 +52,14 @@ export default function RootLayout({ children }) {
           </nav>
         </header>
         <div className="bg-yellow-500 h-1"></div> {/* Yellow line */}
+        <main className="flex-grow">
         {children}
+        </main>
         {/* Footer */}
         <footer className="bg-blue-800 text-white">
           <div className="bg-yellow-500 h-1"></div> {/* Yellow line */}
           <div className="flex flex-col items-center py-4 px-8">
-            <p className="text-sm">&copy; 2024 Teknik Telekomunikasi, Institut Teknologi Sumatera</p>
+            <p className="text-sm">&copy; {currentYear} Teknik Telekomunikasi, Institut Teknologi Sumatera</p>
             <p className="text-sm">All rights reserved.</p>
           </div>
         </footer>
